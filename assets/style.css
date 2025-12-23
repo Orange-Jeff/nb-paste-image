@@ -1,0 +1,482 @@
+/**
+ * NB Paste Image - Styles
+ * Version: 1.0.0
+ */
+
+/* ============================================
+   Admin Bar Icon
+============================================ */
+#wp-admin-bar-nb-paste-image .ab-icon {
+    margin-right: 6px;
+}
+
+#wp-admin-bar-nb-paste-image .ab-icon:before {
+    content: '\f504';
+    top: 3px;
+}
+
+/* ============================================
+   Paste Zone Overlay
+============================================ */
+.nb-paste-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.nb-paste-zone-inner {
+    background: #fff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.nb-paste-zone-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.nb-paste-zone-close:hover {
+    background: #f0f0f1;
+    color: #d63638;
+}
+
+/* ============================================
+   Paste Zone Header
+============================================ */
+.nb-paste-zone-header {
+    background: linear-gradient(135deg, #2271b1 0%, #135e96 100%);
+    color: #fff;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nb-paste-zone-header .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+}
+
+.nb-paste-zone-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ============================================
+   Paste Zone Content
+============================================ */
+.nb-paste-zone-content {
+    padding: 25px;
+}
+
+/* Tabs */
+.nb-paste-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c3c4c7;
+}
+
+.nb-paste-tab {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: #f6f7f7;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #50575e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.nb-paste-tab:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+.nb-paste-tab:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+.nb-paste-tab:hover {
+    background: #e8e8e8;
+}
+
+.nb-paste-tab.active {
+    background: #fff;
+    color: #2271b1;
+    border-bottom-color: #2271b1;
+}
+
+.nb-paste-tab .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* URL Input */
+.nb-url-input-wrap {
+    padding: 20px;
+    background: #f6f7f7;
+    border-radius: 8px;
+}
+
+.nb-url-input-wrap label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1d2327;
+}
+
+.nb-url-input-wrap input[type="url"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.nb-url-input-wrap input[type="url"]:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.nb-url-input-wrap small {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.nb-url-input-wrap .button {
+    width: 100%;
+    padding: 12px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Preview Clear Button */
+.nb-preview-clear {
+    margin-top: 10px;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+/* Preview Source */
+#nbPastePreviewSource {
+    display: block;
+    margin-top: 4px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Drop Zone */
+.nb-paste-dropzone {
+    border: 3px dashed #c3c4c7;
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f6f7f7;
+}
+
+.nb-paste-dropzone:hover {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.nb-paste-dropzone .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    margin-bottom: 15px;
+}
+
+.nb-paste-dropzone:hover .dashicons {
+    color: #2271b1;
+}
+
+.nb-paste-dropzone p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.nb-paste-dropzone strong {
+    color: #1d2327;
+}
+
+/* Preview */
+.nb-paste-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nb-paste-preview img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nb-paste-preview-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Options */
+.nb-paste-options {
+    margin-top: 20px;
+}
+
+.nb-paste-option-row {
+    margin-bottom: 15px;
+}
+
+.nb-paste-option-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.nb-paste-option-row input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.nb-paste-option-row input[type="text"]:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+/* Action Buttons */
+.nb-paste-actions-row {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nb-paste-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nb-paste-action {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 15px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s !important;
+}
+
+.nb-paste-action .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.nb-paste-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nb-paste-action[data-action="featured"] {
+    background: #dba617 !important;
+    border-color: #dba617 !important;
+    color: #fff !important;
+}
+
+.nb-paste-action[data-action="featured"]:hover {
+    background: #c59615 !important;
+}
+
+.nb-paste-action[data-action="insert"] {
+    background: #00a32a !important;
+    border-color: #00a32a !important;
+    color: #fff !important;
+}
+
+.nb-paste-action[data-action="insert"]:hover {
+    background: #008a20 !important;
+}
+
+/* Status */
+.nb-paste-status {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.nb-paste-success {
+    background: #edfaef;
+    border: 1px solid #00a32a;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* ============================================
+   Paste Zone Footer
+============================================ */
+.nb-paste-zone-footer {
+    padding: 12px 25px;
+    background: #f6f7f7;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.nb-paste-zone-footer small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* ============================================
+   Global Paste Indicator
+============================================ */
+.nb-paste-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(34, 113, 177, 0.95);
+    color: #fff;
+    padding: 30px 50px;
+    border-radius: 12px;
+    font-size: 18px;
+    z-index: 100001;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.nb-paste-indicator .dashicons {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+}
+
+/* ============================================
+   Notifications
+============================================ */
+.nb-paste-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #1d2327;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 100002;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nb-paste-notification.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.nb-paste-notification-success {
+    background: #00a32a;
+}
+
+.nb-paste-notification-error {
+    background: #d63638;
+}
+
+.nb-paste-notification .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ============================================
+   Spin Animation
+============================================ */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.dashicons.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   Responsive
+============================================ */
+@media (max-width: 600px) {
+    .nb-paste-zone-inner {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .nb-paste-action-buttons {
+        flex-direction: column;
+    }
+
+    .nb-paste-action {
+        min-width: 100%;
+    }
+}
